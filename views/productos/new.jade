@@ -1,0 +1,38 @@
+extends ../layout.jade
+block contenido
+    div(class="col-md-5 center-block no-float top-space")
+        h1(class="centrado no-float") Agregar producto
+        form(method="post" action="/productos" class="top-space" enctype="multipart/form-data")
+            div(class="form-group")
+                label Nombre
+                input(type="text" name="title" placeholder="Nombre del articulo" class="form-control")
+            div(class="form-group")
+                label Descripcion
+                textarea(type="text" name="description" placeholder="Descripcion del articulo" class="form-control")
+            div(class="form-group")
+                label Marca: 
+                select(name="marca" class="form-control")
+                    option(value="BONCAHIER") Boncahier
+                    option(value="FLAME TREE") Flame Tree
+                    option(value="LIFE CANVAS") Life canvas
+                    option(value="WATERCOLOUR BOOKS") WaterColour Books
+                    option(value="OTROS") Otros
+            div(class="form-group")
+                label Numero de Articulo
+                input(type="number" name="nart" placeholder="Numero de aticulo" class="form-control")
+            div(class="form-group")
+                label Codigo de barra
+                input(type="number" name="ean" placeholder="Numero de codigo de barra" class="form-control")
+            div(class="form-group")
+                label Precio
+                input(type="number" name="price" placeholder="Precio del articulo" class="form-control")
+            div(class="form-group")
+                label Imagen
+                input(type="file" name="imageUrl" placeholder="Imagen del articulo" class="form-control")
+            div(class="form-group")
+                label Contraseña
+                input(type="password" name="password" placeholder="Contraseña" class="form-control")
+            div(class="form-group text-right")
+                input(class="btn btn-info" value="Guardar"  type="submit")
+            
+    

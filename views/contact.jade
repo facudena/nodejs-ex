@@ -1,0 +1,39 @@
+extends layout.jade
+block contenido
+    // Banner area
+    section(class="banner_area" data-stellar-background-ratio="0.5")
+        h2 Contactanos
+        ol(class="breadcrumb")
+            li
+                a(href="index")
+    // End Banner area
+    //map
+    div(class="contact_map")
+        iframe(src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3286.8962929070585!2d-58.50270228525556!3d-34.53085536115256!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcb12cdc19c2d7%3A0xa877e689261b8f92!2sArenales+2837%2C+B1602DHK+Florida%2C+Buenos+Aires!5e0!3m2!1ses-419!2sar!4v1519503626940")
+    //contact info
+    section(class="all_contact_info")
+        div(class="container")
+            div(class="row contact_row")
+                div(class="col-sm-6 contact_info")
+                    h2 The Folders
+                    p ------------------------------------------------------------------------------------
+                    p ------------------------------------------------------------------------------------
+                    div(class="location")
+                        div(class="location_laft")
+                            a(class="f_location" href="#") Ubicacion:
+                            a(hreff="#") Numero tlf:
+                            a(href="#") email:
+                        div(class="address")
+                            a(href="#") Arenales 2837 #[br] Florida (1602), Buenos Aires
+                            a(href="#") +54 (011) 4760-6750
+                            a(href="#") ventas@thefolders.com.ar
+                .col-sm-6.contact_info.send_message
+                    h2 Dejanos tu mensaje
+                    form.form-inline.contact_box
+                        input.form-control.input_box(type='text', placeholder='Nombre *')
+                        input.form-control.input_box(type='text', placeholder='Apellido *')
+                        input.form-control.input_box(type='text', placeholder='Email *')
+                        input.form-control.input_box(type='text', placeholder='Asunto')
+                        textarea.form-control.input_box(placeholder='Mensaje')
+                        button.btn.btn-default(type='submit') Enviar mensaje
+

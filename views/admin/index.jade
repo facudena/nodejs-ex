@@ -1,0 +1,35 @@
+extends ../layout.jade
+block contenido
+    h1(class="text-center top-space") Panel de Administracion
+    div(class="container-fluid top-space text-right" style="border-top: 3px solid black; padding-top: 15px; padding-bottom: 3%;")
+        a(class="btn btn-info" href="/productos/new") Crear nuevo producto
+
+    table(class="table")
+        caption(style="margin-left: 35%; font-weight: 1000; color: black; font-size: 3em;") Productos Actuales
+        thead
+            tr
+                th #ID
+                th Nombre
+                th Descripcion
+                th Marca
+                th Numero de articulo
+                th Codigo de Barra - EAN
+                th Precio ARS
+                th Imagen
+                th Accion
+        tbody
+            each product in products
+                tr
+                    td= product.id
+                    td= product.title
+                    td= product.description
+                    td= product.marca
+                    td= product.nart
+                    td= product.ean
+                    td= product.price
+                    td
+                        a(href="#{product.imageUrl}" class="btn" target="_blank") ver imagen
+                    td
+                        a(href="/productos/edit/#{product.id}") Editar
+                        =" - "
+                        a(href="/productos/delete/#{product.id}") Eliminar

@@ -1,0 +1,148 @@
+doctype html
+html(lang="eng")
+    head
+        title The Folders S.A
+        meta(charset="utf-8")
+        meta(name="viewport" content="width=device-width, initial-scale=1")
+        meta(http-equiv="X-UA-Compatible" content="IE=edge")
+        link(rel="icon" href="/images/book-icon2.png" type="image/x-icon")
+        link(rel="stylesheet" href="/css/bootstrap.min.css")
+        link(href="/vendors/animate/animate.css" rel="stylesheet")
+        link(rel="stylesheet" href="/vendors/font-awesome/css/font-awesome.min.css")
+        link(rel="stylesheet" href="/vendors/camera-slider/camera.css")
+        link(rel="stylesheet" type="text/css" href="/vendors/owl_carousel/owl.carousel.css" media="all")
+        link(rel="stylesheet" type="text/css" href="/css/style.css" media="all")
+        // Custom styles for this template
+        link(href='/css/simple-sidebar.css', rel='stylesheet' type="text/css")
+
+
+
+    body
+        //preloader
+        div(class="preloader")
+        //top header
+        section(class="top_header_area")
+            div(class="container")
+                ul(class="nav navbar-nav top_nav")
+                    li
+                        a(href="/admin" ) Login
+                    li
+                        a(href="#") #[i(class="fa fa-phone")]+54 (011) 4760-5760
+                    li
+                        a(href="#") #[i(class="fa fa-envelope-o")]ventas@thefolders.com.ar
+                    li
+                        a(href="#") #[i(class="fa fa-clock-o")]Lun - Vier 12:00 - 20:00
+
+                ul(class="nav navbar-nav navbar-right social_nav")
+                    li
+                        a(href="#") #[i(class="fa fa-facebook" aria-hidden="true")]
+                    li
+                        a(href="#") #[i(class="fa fa-twitter" aria-hidden="true")]
+                    li
+                        a(href="#") #[i(class="fa fa-google-plus" aria-hidden="true")]
+                    li
+                        a(href="#") #[i(class="fa fa-instagram" aria-hidden="true")]
+                    li
+                        a(href="#") #[i(class="fa fa-linkedin" aria-hidden="true")]
+        //header area
+        nav(class="navbar navbar-default header_aera" id="main_navbar")
+            div(class="container")
+                //searchform
+                div(class="searchForm")
+                    form(action="/busqueda" method="POST" class="row m0")
+                        div(class="input-group")
+                            span(class="input-group-addon") #[i(class="fa fa-search")]
+                            input(type="text" name="search" class="form-control" placeholder="Ingresar Busqueda")
+                            span(class="input-group-addon form_hide") #[i(class="fa fa-times")]
+                //end searchform
+                //brand and toggle get grouped for better mobile display
+                div(class="col-md-2 p0")
+                    div(class="navbar-header")
+                        button(type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#min_navbar")
+                            span(class="sr-only") Desplegar Menu
+                            span(class="icon-bar")
+                            span(class="icon-bar")
+                            span(class="icon-bar")
+                        a(class="navbar-brand" href="/") #[img(src="/images/logoheaderrTFDS.png" alt="Logo")]
+                //Collect the nav links, forms and other content for toggling
+                div(class="col-md-10 p0")
+                    div(class="collapse navbar-collapse" id="min_navbar")
+                        ul(class="nav navbar-nav navbar-right")
+                            li(class="dropdown submenu")
+                                a(href="/" class="dropdown-toggle") Inicio
+                            li(class="dropdown submenu")
+                                a(href="nosotros" class="dropdown-toggle") Nosotros
+                            li(class="dropdown submenu")
+                                a(href="/productos" class="dropdown-toggle") Catalogo
+                            li(class="dropdown submenu")
+                                a(href="contact" class="dropdown-toggle") Contactanos
+                            li
+                                a(href="#" class="nav_searchFrom") #[i(class="fa fa-search")]
+        block contenido
+        //footer
+        footer(class="footer_area")
+            div(class="container")
+                div(class="footer_row row")
+                    div(class="col-md-3 col-sm-6 footer_about")
+                        h2 Sobre nuestra compañia
+                        img(src="/images/logofooterrTFDS.png" alt="logo")
+                        p VENTA AL POR MATOR DE ARTICULOS DE LIBRERIA Y PAPELERIA
+                        ul(class="socail_icon")
+                            li
+                                a(href="#") #[i(class="fa fa-facebook" aria-hidden="true")]
+                            li
+                                a(href="#") #[i(class="fa fa-twitter" aria-hidden="true")]
+                            li
+                                a(href="#") #[i(class="fa fa-instagram" aria-hidden="true")]
+                            li
+                                a(href="#") #[i(class="fa fa-linkedin" aria-hidden="true")]
+                    div(class="col-md-3 col-sm-6 footer_about quick")
+                        h2 Enlaces Utilues
+                        ul(class="quick_link")
+                            li
+                                a(href="#" target="_blank") #[i(class="fa fa-chevron-right")] Pebeo
+                            li
+                                a(href="#" target="_blank") #[i(class="fa fa-chevron-right")] Pebeo
+                            li
+                                a(href="#" target="_blank") #[i(class="fa fa-chevron-right")] Pebeo
+                            li
+                                a(href="#" target="_blank") #[i(class="fa fa-chevron-right")] Pebeo
+                    div(class="col-md-3 col-sm-6 footer_about")
+                        h2 Twitter/Facebook feed
+                        a(href="#" class="twitter")
+                        a(href="#" class="twitter")
+                    div(class="col-md-3 col-sm-6 footer_about")
+                        h2 Contacto
+                        address
+                            p Tenes dudas, comentarios, o queres saludarnos?
+                            ul(class="my_address")
+                                li
+                                    a(href="#") #[i(class="fa fa-envelope" aria-hidden="true")] ventas@thefolders.com.ar
+                                li
+                                    a(href="#") #[i(class="fa fa-phone" aria-hidden="true")] +54 (011) 4760-5760
+                                li
+                                    a(href="#") #[i(class="fa fa-map-marker" aria-hidden="true")] Arenales 2837, Florida(1602), Buenos Aires
+            div(class="copyright_area")
+                p Copyright 2018 The Folders S.A 
+        // jQuery JS
+        script(src='/js/jquery-1.12.0.min.js')
+        // Bootstrap JS
+        script(src='/js/bootstrap.min.js')
+        // Animate JS
+        script(src='/vendors/animate/wow.min.js')
+        // Camera Slider
+        script(src='/vendors/camera-slider/jquery.easing.1.3.js')
+        script(src='/vendors/camera-slider/camera.min.js')
+        // Isotope JS
+        script(src='/vendors/isotope/imagesloaded.pkgd.min.js')
+        script(src='/vendors/isotope/isotope.pkgd.min.js')
+        // Progress JS
+        script(src='/vendors/Counter-Up/jquery.counterup.min.js')
+        script(src='/vendors/Counter-Up/waypoints.min.js')
+        // Owlcarousel JS
+        script(src='/vendors/owl_carousel/owl.carousel.min.js')
+        // Stellar JS
+        script(src='/vendors/stellar/jquery.stellar.js')
+        // Theme JS
+        script(src='/js/theme.js')
+        

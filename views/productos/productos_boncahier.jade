@@ -1,0 +1,50 @@
+extends ../layout.jade
+block contenido
+    #wrapper
+        #sidebar-wrapper
+            ul.sidebar-nav
+                li.sidebar-brand
+                    h2(class="top-space" style="color: white;") CATALOGO
+                li
+                    a(href='/productos/productos_boncahier' style="color: white; font-weight: 800;") Boncahier
+                li
+                    a(href='/productos/productos_flame') Flame Tree
+                li
+                    a(href='/productos/productos_life') Life Canvas
+                li
+                    a(href='/productos/productos_watercolour') WaterColour Books
+                li
+                    a(href='/productos/productos_otros') Otros
+        #page-content-wrapper
+                .container-fluid
+                    a#menu-toggle.btn.btn-info(href='#menu-toggle' style="background-color: gray; margin-bottom: 20px; border: 1px solid black; width: 200px;") CATALOGO
+                    h1 Boncahier
+                    div(class="container")
+                        each product in products
+                            div(class="col-md-10 col-sm-12 col-xs-12 top-space" style="border-top:1px solid black;")
+                                div(#producto)
+                                    img(src="#{ product.imageUrl }" style="float:left; max-width: 100px; margin-right: 1em;")
+                                    div(class="container")
+                                        div(class="col-md-10 cold-sm-12 col-xs-12")
+                                            h4(class="top-space")= product.title
+                                            h5 Descripcion:
+                                            p(class="descripcion-productos" style="white-space:pre;") #{ product.description }
+                                            h5 Precio: $#{ product.price }
+                                            if product.nart
+                                                h5 N art: #{ product.nart }
+                                            if product.ean
+                                                h5 Codigo de barra/ean: #{ product.ean }
+
+                                        
+                                    
+
+    script(src='/vendors/jquery/jquery.min.js')
+    script(src='/vendors/bootstrap/js/bootstrap.bundle.min.js')
+    // Menu Toggle Script
+    script.
+        $("#menu-toggle").click(function(e) {
+            e.preventDefault();
+            $("#wrapper").toggleClass("toggled");
+        });
+
+

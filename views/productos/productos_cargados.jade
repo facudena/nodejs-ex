@@ -1,0 +1,39 @@
+extends ../layout.jade
+block contenido
+    #wrapper
+        #sidebar-wrapper
+            ul.sidebar-nav
+                li.sidebar-brand
+                    h2(class="top-space" style="color: white;") CATALOGO
+                li
+                    a(href='/productos/productos_boncahier') Boncahier
+                li
+                    a(href='/productos/productos_flame') Flame Tree
+                li
+                    a(href='/productos/productos_life') Life Canvas
+                li
+                    a(href='/productos/productos_watercolour') WaterColour Books
+                li
+                    a(href='/productos/productos_otros') Otros
+        #page-content-wrapper
+                .container-fluid
+                    a#menu-toggle.btn.btn-info(href='#menu-toggle' style="background-color: gray; margin-bottom: 20px; border: 1px solid black; width: 200px;") CATALOGO
+                    div(class="container" style="overflow: auto;")
+                        div(class="col-md-5 col-xs-12" style="overflow: auto; margin-top: 30px; background-color: rgb(96, 96, 96, 0.3);")
+                            h2(style="font-style: italic;") Catalogo The Folders S.A
+                            p
+                                | Lorem ipsum, dolor sit amet consectetur adipisicing elit. Qui libero unde laudantium recusandae expedita atque molestias! Numquam repudiandae sed nihil ea, minus voluptate. Autem expedita enim maiores sit fugiat nam.
+                            p
+                                | Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus suscipit sapiente deserunt ea quo esse, optio dolores, enim excepturi quae ad illum velit et, eaque repellat ex! Cupiditate, doloremque aliquid.
+                                | .
+                        img(class="imagencat" src="/images/brown_interior.jpg", alt="imagen")
+    script(src='/vendors/jquery/jquery.min.js')
+    script(src='/vendors/bootstrap/js/bootstrap.bundle.min.js')
+    // Menu Toggle Script
+    script.
+        $("#menu-toggle").click(function(e) {
+            e.preventDefault();
+            $("#wrapper").toggleClass("toggled");
+        });
+
+
